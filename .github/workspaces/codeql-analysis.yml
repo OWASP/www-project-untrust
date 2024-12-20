@@ -1,0 +1,38 @@
+name: CodeQL Analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 3 * * 1' # Weekly analysis on Monday at 3 AM
+
+jobs:
+  codeql:
+    name: Analyze (CodeQL)
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      matrix:
+        language: [ 'java', 'python', 'csharp' ]
+        # Adjust languages based on your repository's content
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Initialize the CodeQL tool
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+
+      # Perform the analysis
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
