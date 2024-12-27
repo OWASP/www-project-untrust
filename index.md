@@ -5,7 +5,7 @@ title: OWASP untrust
 tags: example-tag
 level: 2
 type: code
-pitch: A very brief, one-line description of your project
+pitch: OWASP-Untrust replaces risky base programming constructs with secure, validated types (e.g., BoxedPath, BoundedString) to enforce safety and prevent vulnerabilities at the core.
 
 ---
 
