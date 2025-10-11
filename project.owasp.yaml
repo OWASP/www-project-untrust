@@ -1,0 +1,22 @@
+audience:
+  - builder
+leaders:
+  - name: Yariv Tal
+    email: yariv.tal@owasp.org
+    github: yarivtal
+level: 2
+license:
+  - MIT
+name: OWASP untrust
+pitch: OWASP-Untrust replaces risky base programming constructs with secure, validated types (e.g., BoxedPath, BoundedString) to enforce safety and prevent
+  vulnerabilities at the core.
+repositories:
+  - name: www-project-untrust
+    url: https://github.com/OWASP/www-project-untrust
+    description: OWASP Foundation Web Repository
+tags:
+  - example-tag
+  - custom-tag-1
+  - custom-tag-2
+type: code
+website: https://owasp.org/www-project-untrust
